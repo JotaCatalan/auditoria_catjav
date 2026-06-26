@@ -222,9 +222,3 @@ Por esta razón:
 | Command Injection | 5 | 5 | 25 (Crítico) |
 
 ---
-
-# Conclusión
-
-La Triada CIA permite determinar qué tan importantes son los activos de información para MercadoSur, mientras que la Matriz de Riesgo permite cuantificar el nivel de amenaza que representan las vulnerabilidades detectadas.
-
-Al combinar ambos enfoques se observa que las vulnerabilidades SQL Injection y Command Injection representan riesgos críticos debido a que afectan activos con altos requerimientos de confidencialidad, integridad y disponibilidad, especialmente los datos de pago de los clientes. Por su parte, XSS representa un riesgo alto debido a su capacidad de comprometer sesiones y datos personales, aunque con un impacto menor que las vulnerabilidades anteriores.
