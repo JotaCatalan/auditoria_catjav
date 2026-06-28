@@ -30,6 +30,14 @@ function App() {
       </aside>
 
       <div className="page-content">
+        <div className="page-panel-header">
+          <div className="page-panel-badge">Auditoría Sec</div>
+          <div>
+            <p className="page-panel-label">AFP Horizonte</p>
+            <h1 className="page-panel-title">Resumen de la Auditoría</h1>
+          </div>
+        </div>
+
         <section id="resumen">
           <Resumen />
         </section>
