@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Resumen from './components/01_Resumen.jsx'
 import InyeccionSQL from './components/02_InyeccionSQL.jsx'
@@ -11,8 +10,6 @@ import Recuperacion from './components/08_Recuperacion.jsx'
 import Prompt from './components/09_prompt.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <main className="app-shell">
       <aside className="page-index" aria-label="Índice de navegación">
