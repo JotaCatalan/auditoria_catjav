@@ -1,8 +1,8 @@
-import React from 'react'
+import 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import mdRaw from '../../Docs_catjav/08_Recuperacion_catjav.md?raw'
-import { ShieldCheck, ShieldAlert, Database, Server, Zap, FileText, Key } from 'lucide-react'
+import { ShieldCheck, Database, Server, Zap, FileText, Key } from 'lucide-react'
 
 const featureCards = [
   {

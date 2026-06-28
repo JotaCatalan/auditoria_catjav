@@ -1,8 +1,8 @@
-import React from 'react'
+import 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import mdRaw from '../../Docs_catjav/07_Controles_catjav.md?raw'
-import { ShieldCheck, Lock, Database, Cpu, Key, ShieldAlert } from 'lucide-react'
+import { ShieldCheck, Lock, Database, Key, ShieldAlert } from 'lucide-react'
 
 const ControlCard = ({ icon: Icon, title, subtitle, children }) => (
   <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-sm">
