@@ -1,42 +1,40 @@
-import 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import mdRaw from '../../Docs_catjav/08_Recuperacion_catjav.md?raw'
-import { ShieldCheck, Database, Server, Zap, FileText, Key } from 'lucide-react'
 
 const featureCards = [
   {
-    icon: ShieldCheck,
+    icon: '🛡️',
     title: 'WAF',
     subtitle: 'Web Application Firewall',
     description: 'Bloquea ataques como SQLi, XSS y Command Injection antes de que lleguen a la aplicación.'
   },
   {
-    icon: Key,
+    icon: '🔑',
     title: 'MFA',
     subtitle: 'Autenticación Multifactor',
     description: 'Agrega una segunda capa de seguridad para reducir el riesgo de credenciales robadas.'
   },
   {
-    icon: Zap,
+    icon: '⚡',
     title: 'SIEM',
     subtitle: 'Monitoreo centralizado',
     description: 'Detecta y correlaciona eventos en tiempo real para una respuesta temprana.'
   },
   {
-    icon: Database,
+    icon: '🗄️',
     title: 'Backups',
     subtitle: 'Respaldos periódicos',
     description: 'Guarda copias en ubicaciones separadas y verifica restauraciones regularmente.'
   },
   {
-    icon: Server,
+    icon: '🖥️',
     title: 'Redundancia',
     subtitle: 'Infraestructura adicional',
     description: 'Mantiene servicios disponibles cuando falla el servidor principal.'
   },
   {
-    icon: FileText,
+    icon: '📄',
     title: 'Protocolos',
     subtitle: 'Plan de recuperación',
     description: 'Define pasos claros, roles y comunicación para restaurar el servicio rápidamente.'
@@ -65,22 +63,21 @@ export default function Recuperacion() {
           </div>
           <div className="flex flex-wrap gap-3">
             <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 text-sky-700 px-3 py-2 text-sm font-medium dark:bg-sky-950/40 dark:text-sky-300">
-              <ShieldCheck className="w-4 h-4" /> Seguridad Perimetral
+              <span aria-hidden className="inline-block">🛡️</span> Seguridad Perimetral
             </div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 text-emerald-700 px-3 py-2 text-sm font-medium dark:bg-emerald-950/40 dark:text-emerald-300">
-              <Key className="w-4 h-4" /> Protección de Acceso
+              <span aria-hidden className="inline-block">🔑</span> Protección de Acceso
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
           {featureCards.map((card) => {
-            const Icon = card.icon
             return (
               <div key={card.title} className="rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-5 shadow-sm hover:-translate-y-0.5 transition-transform">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="rounded-2xl bg-sky-600/10 p-3 text-sky-600 dark:bg-sky-400/10 dark:text-sky-300">
-                    <Icon className="w-5 h-5" />
+                    <span aria-hidden className="inline-block">{card.icon}</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{card.title}</h3>

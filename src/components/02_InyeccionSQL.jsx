@@ -1,4 +1,4 @@
-import  'react'
+// React import not required in newer JSX transforms
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import mdRaw from '../../Docs_catjav/02_SQLI_catjav.md?raw'
@@ -17,10 +17,10 @@ export default function InyeccionSQL() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6">
+    <div className="w-full mx-auto p-6">
+      <div className="app-card-inner bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6 max-w-6xl mx-auto">
         <div className="mb-4 flex items-start gap-4">
-          <img src={sqliImg} alt="SQLi reference" className="w-28 h-28 object-contain rounded-md border" />
+          <img src={sqliImg} alt="SQLi reference" className="w-full max-w-full h-auto object-contain rounded-md border" />
           <div>
             <h2 className="text-2xl font-semibold">{title}</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">Referencia rápida de Inyección SQL</p>

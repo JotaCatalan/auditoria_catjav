@@ -1,9 +1,8 @@
-import React from 'react'
+// React import not required in newer JSX transforms
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import mdRaw from '../../Docs_catjav/04_Comandos_catjav.md?raw'
 import cmdImg from '../../Docs_catjav/img_catjav/comandos_catjav.PNG'
-import { Terminal, CornerDownLeft, Info } from 'lucide-react'
 
 export default function Comandos() {
   const lines = mdRaw.split('\n')
@@ -18,21 +17,21 @@ export default function Comandos() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6">
+    <div className="w-full mx-auto p-6">
+      <div className="app-card-inner bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6 max-w-6xl mx-auto">
         <div className="flex items-start gap-4 mb-4">
-          <img src={cmdImg} alt="Comandos reference" className="w-28 h-28 object-contain rounded-md border" />
+          <img src={cmdImg} alt="Comandos reference" className="w-full max-w-full h-auto object-contain rounded-md border" />
           <div className="flex-1">
             <div className="flex items-center gap-3">
-              <Terminal className="w-6 h-6 text-green-600" />
+              <span className="w-6 h-6 text-green-600" aria-hidden>⌨️</span>
               <h2 className="text-2xl font-semibold">{title}</h2>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-2">
-              <CornerDownLeft className="w-4 h-4 text-gray-500" /> Comandos útiles y ejemplos
+              <span className="w-4 h-4 text-gray-500" aria-hidden>↩️</span> Comandos útiles y ejemplos
             </p>
           </div>
           <div className="flex flex-col items-end gap-2">
-            <Info className="w-5 h-5 text-sky-600" />
+            <span className="w-5 h-5 text-sky-600" aria-hidden>ℹ️</span>
           </div>
         </div>
 
@@ -57,7 +56,7 @@ export default function Comandos() {
             blockquote: ({...props}) => (
               <blockquote className="border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic text-gray-600 dark:text-gray-300 my-4" {...props} />
             ),
-            code: ({inline, className, children, ...props}) => (
+            code: ({inline, children, ...props}) => (
               inline ? (
                 <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm" {...props}>{children}</code>
               ) : (

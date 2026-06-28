@@ -16,8 +16,8 @@ export default function Resumen() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6">
+    <div className="w-full mx-auto p-6">
+      <div className="app-card-inner bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-lg p-6 max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold mb-4">{title}</h2>
 
         <div className="prose dark:prose-invert max-w-none">
