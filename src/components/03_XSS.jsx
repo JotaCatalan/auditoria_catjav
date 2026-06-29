@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import xssMarkdown from "../../Docs_catjav/03_XSS_catjav.md?raw";
 import xssImage from "../../Docs_catjav/img_catjav/xss_catjav.PNG";
 
@@ -7,7 +8,7 @@ export default function XSS() {
     <div className="max-w-4xl mx-auto p-6 prose">
 
       {/* Markdown del informe */}
-      <ReactMarkdown>{xssMarkdown}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{xssMarkdown}</ReactMarkdown>
 
       {/* Imagen del ataque XSS */}
       <div className="mt-6">

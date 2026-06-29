@@ -10,21 +10,142 @@
 
 4.- Describe en formato markdown cual seria la Mejora tecnológica y plan de recuperación (DR) para la empresa mercadosur. a Cada caso dame 3 mejoras que se podrian usar y explicalos en un detalle simple y que no exceda las 50 palabras cada uno
 
-## fase 2: modificacion de los .jsx
 
-1.- Usa React JSX + Tailwind CSS para agregar los datos de . Convierte el siguiente markdown en un componente visual. Debe incluir tarjeta moderna, título con Luci01_resumen_catjav.md de React, renderizar encabezados markdown, párrafos y tablas si existen.
+## Fase 2: Ingreso de los Markdown a los JavaScript
 
-2.- Para 02_inyeccionSQL.jsx agregar los datos de 01_SQLI_catjav.md usando React JSX + Tailwind CSS y agrega la imagen sqli_catjav.png al principio para referencia.
+### Prompt 1: Resumen de la empresa
 
-3.- haz lo mismo para 03_XSS.jsx usando 03_XSS_catjav.md y usa la imagen xss_catjav.PNG agrega detalles como iconos de lucide.
+**Objetivo:** Crear un componente React capaz de leer el archivo `01_resumen_catjav.md` y utilizarlo posteriormente en `App.jsx`.
 
-4.- haz lo mismo para 04_comandos.jsx usando 004_Comandos_catjav.md y usa la imagen comandos_catjav.PNG agrega detalles como iconos de lucide.
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\01_resumen_catjav.md`...
+>
+> Necesito que el documento lo pueda leer `C:\auditoria_catjav\src\components\01_Resumen.jsx` para después ser usado en `C:\auditoria_catjav\src\App.jsx`.
 
-5.- agregar a 06_matriz.jsx el 06_matriz_catjav.md. agrega iconos de lucide para que sea mas bonito a la vista y agrega una tabla similar al de la imagen otorgada, manten los colores de la imagen.
+---
 
-6.- agrega a 07_controles.jsx los datos de 07_controles_catjav.md. agrega iconos de lucide react que tengan relacion con ciberseguridad o datos electronicos.
+### Prompt 2: SQL Injection
 
-7.- agrega a 08_Recuperacion.jsx los datos de 08_Recuperacion_catjav.md. agrega iconos de lucide react que tengan relacion con ciberseguridad o datos electronicos.
+**Objetivo:** Mostrar el contenido del archivo Markdown junto con una imagen demostrativa del ataque.
 
-8.- haz que 09_prompt.jsx lea los datos de 09_prompts_catjav.md. hazlo de tal manera que cuando se agregue nueva informacion al markdown, pueda leerlo sin problemas.
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\02_SQLI_catjav.md`...
+>
+> Necesito que el documento lo pueda leer `02_InyeccionSQL.jsx` para después ser usado en `App.jsx`.
+>
+> También debe implementarse la imagen `sqli_catjav.PNG` y que pueda ser visible por el usuario al ver la página.
+
+---
+
+### Prompt 3: Cross-Site Scripting (XSS)
+
+**Objetivo:** Cargar el informe del ataque XSS e incorporar la captura de evidencia.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\03_XSS_catjav.md`...
+>
+> Necesito que el documento lo pueda leer `03_XSS.jsx` para después ser usado en `App.jsx`.
+>
+> También debe implementarse la imagen `xss_catjav.PNG` y que pueda ser visible por el usuario.
+
+---
+
+### Prompt 4: Command Injection
+
+**Objetivo:** Crear el componente React para mostrar el informe del ataque Command Injection.
+
+> Necesito el componente `C:\auditoria_catjav\src\components\04_Comandos.jsx` que cargue el archivo Markdown correspondiente y permita mostrar posteriormente la evidencia del ataque.
+
+---
+
+### Prompt 5: Clasificación de Activos
+
+**Objetivo:** Mostrar el contenido del archivo `05_Activos_catjav.md` en React.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\05_Activos_catjav.md`.
+>
+> Necesito que el documento lo pueda leer `05_Activos.jsx` para después ser usado en `App.jsx`.
+
+---
+
+### Prompt 6: Matriz de Riesgo
+
+**Objetivo:** Mostrar la matriz de riesgos desarrollada en Markdown dentro del sitio web.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\06_Matriz_catjav.md`.
+>
+> Necesito que el documento lo pueda leer `06_Matriz.jsx` para después ser usado en `App.jsx`.
+
+---
+
+### Prompt 7: Controles de Seguridad
+
+**Objetivo:** Crear el componente React para visualizar el documento de controles de seguridad.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\07_Controles_catjav.md`.
+>
+> Necesito que el documento lo pueda leer `07_controles.jsx` para después ser usado en `App.jsx`.
+
+---
+
+### Prompt 8: Plan de Recuperación
+
+**Objetivo:** Incorporar el documento de recuperación y continuidad del negocio.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\08_Recuperacion_catjav.md`.
+>
+> Necesito que el documento lo pueda leer `08_Recuperacion.jsx` para después ser usado en `App.jsx`.
+
+---
+
+### Prompt 9: Registro de Prompts
+
+**Objetivo:** Mostrar el documento que recopila los prompts utilizados durante el proyecto.
+
+> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\09_Prompts_catjav.md`.
+>
+> Necesito que el documento lo pueda leer `09_prompt.jsx` para después ser usado en `App.jsx`.
+
+---
+
+### Prompt 10: Integración de todos los componentes
+
+**Objetivo:** Integrar todos los componentes creados dentro de una única aplicación React.
+
+> ¿Puedes crear en `App.jsx` donde estén todos los `.jsx` como me mostraste?
+
+---
+
+### Prompt 11: Diseño profesional
+
+**Objetivo:** Rediseñar completamente la interfaz para que tenga apariencia de una auditoría profesional.
+
+> Necesito que se vea profesional como la página de referencia utilizando el esquema de colores:
+>
+> - `#08415C`
+> - `#CC2936`
+> - `#EBBAB9`
+> - `#388697`
+> - `#B5FFE1`
+>
+> Utilizando `App.css` y `App.jsx` usando el JavaScript anterior como base.
+
+---
+
+### Prompt 12: Visualización de tablas Markdown
+
+**Objetivo:** Permitir que las tablas escritas en los archivos Markdown se rendericen correctamente dentro de React.
+
+> Necesito que las tablas que se usan en los markdown sean visibles en `App.jsx`.
+
+---
+
+## Resultado de la Fase 2
+
+Durante esta fase se logró:
+
+- Crear un componente React independiente para cada documento Markdown.
+- Renderizar el contenido utilizando `ReactMarkdown`.
+- Incorporar imágenes de evidencia para las vulnerabilidades SQL Injection, XSS y Command Injection.
+- Integrar todos los componentes dentro de `App.jsx`.
+- Diseñar una interfaz con apariencia profesional mediante `App.css`.
+- Habilitar el soporte para tablas Markdown utilizando `remark-gfm`.
+- Mantener una estructura modular que facilita la incorporación de nuevas secciones al informe de auditoría.
 
