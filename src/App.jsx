@@ -1,13 +1,12 @@
 import "./App.css";
 import "./styles/matrix.css";
-
 import Resumen from "./components/01_Resumen";
 import InyeccionSQL from "./components/02_InyeccionSQL";
 import XSS from "./components/03_XSS";
 import Comandos from "./components/04_Comandos";
 import Activos from "./components/05_Activos";
 import Matriz from "./components/06_Matriz";
-import Controles from "./components/07_controles";
+import Controles from "./components/07_Controles";
 import Recuperacion from "./components/08_Recuperacion";
 import Prompt from "./components/09_prompt";
 
