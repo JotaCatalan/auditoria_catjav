@@ -1,151 +1,194 @@
 # Prompts usados en el informe
 
-## fase 1: instrucciones para empezar a trabajar
+---
 
-1.- explicame el uso de https://www.first.org/cvss/calculator/3.1 y cuales serian el paso a paso para poder encontrar el puntaje de cvss para un SQLI, XSS y de command inyection que se uso el DVWA basico
+## Fase 1: Instrucciones para empezar a trabajar
 
-2.- explicame los Clasificación de la Información (CIA Triada) para la compañia ficticia mercadosur la cual como rubro E-commerce / retail online y los Datos que custodia el portal son Compras, tarjetas y direcciones de despacho. explica el nivel de cada parte de la triada para cada dato y escribelo en formato markdown para visual studio code
+### Prompt 1: Uso de CVSS 3.1
 
-3.- necesito en formato markdown donde se explique que es la Matriz de riesgo (prob × impacto) + mapa de calor y demostrar como afectan estos a las calculaciones que se hicieron anteriormente
+**Objetivo:** Explicar el uso del calculador CVSS 3.1 y su aplicación en vulnerabilidades del laboratorio DVWA.
 
-4.- Describe en formato markdown cual seria la Mejora tecnológica y plan de recuperación (DR) para la empresa mercadosur. a Cada caso dame 3 mejoras que se podrian usar y explicalos en un detalle simple y que no exceda las 50 palabras cada uno
+> Explicame el uso de https://www.first.org/cvss/calculator/3.1 y cuales serian el paso a paso para poder encontrar el puntaje de CVSS para un SQLI, XSS y de command inyection que se uso el DVWA basico.
 
+---
+
+### Prompt 2: Triada CIA
+
+**Objetivo:** Aplicar la clasificación de la información (Confidencialidad, Integridad y Disponibilidad) a la empresa ficticia MercadoSur.
+
+> Explicame la Clasificación de la Información (CIA Triada) para la compañia ficticia mercadosur la cual es un E-commerce / retail online. Los datos son compras, tarjetas y direcciones de despacho.
+
+---
+
+### Prompt 3: Matriz de riesgo
+
+**Objetivo:** Desarrollar una matriz de riesgo (probabilidad × impacto) con mapa de calor y su relación con vulnerabilidades previas.
+
+> Necesito en formato markdown donde se explique la Matriz de riesgo (prob × impacto) + mapa de calor y demostrar como afectan estos a las calculaciones que se hicieron anteriormente.
+
+---
+
+### Prompt 4: Mejora tecnológica y DRP
+
+**Objetivo:** Proponer mejoras tecnológicas y plan de recuperación ante desastres (DRP) para la empresa MercadoSur.
+
+> Describe en formato markdown cual seria la Mejora tecnológica y plan de recuperación (DR) para la empresa mercadosur. A cada caso dame 3 mejoras con explicación simple menor a 50 palabras.
+
+---
+
+---
 
 ## Fase 2: Ingreso de los Markdown a los JavaScript
 
-### Prompt 1: Resumen de la empresa
+### Prompt 5: Resumen de la empresa
 
-**Objetivo:** Crear un componente React capaz de leer el archivo `01_resumen_catjav.md` y utilizarlo posteriormente en `App.jsx`.
+**Objetivo:** Crear un componente React para leer el archivo `01_resumen_catjav.md`.
 
 > Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\01_resumen_catjav.md`...
->
-> Necesito que el documento lo pueda leer `C:\auditoria_catjav\src\components\01_Resumen.jsx` para después ser usado en `C:\auditoria_catjav\src\App.jsx`.
+> Necesito que el documento lo pueda leer `01_Resumen.jsx` para después ser usado en `App.jsx`.
 
 ---
 
-### Prompt 2: SQL Injection
+### Prompt 6: SQL Injection
 
-**Objetivo:** Mostrar el contenido del archivo Markdown junto con una imagen demostrativa del ataque.
+**Objetivo:** Mostrar Markdown e imagen del ataque SQL Injection.
 
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\02_SQLI_catjav.md`...
->
-> Necesito que el documento lo pueda leer `02_InyeccionSQL.jsx` para después ser usado en `App.jsx`.
->
-> También debe implementarse la imagen `sqli_catjav.PNG` y que pueda ser visible por el usuario al ver la página.
+> Tengo este markdown en la carpeta `02_SQLI_catjav.md`...
+> Necesito que el documento lo pueda leer `02_InyeccionSQL.jsx`.
+> También debe implementarse la imagen `sqli_catjav.PNG`.
 
 ---
 
-### Prompt 3: Cross-Site Scripting (XSS)
+### Prompt 7: Cross-Site Scripting (XSS)
 
-**Objetivo:** Cargar el informe del ataque XSS e incorporar la captura de evidencia.
+**Objetivo:** Renderizar informe XSS con evidencia visual.
 
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\03_XSS_catjav.md`...
->
-> Necesito que el documento lo pueda leer `03_XSS.jsx` para después ser usado en `App.jsx`.
->
-> También debe implementarse la imagen `xss_catjav.PNG` y que pueda ser visible por el usuario.
+> Tengo este markdown en la carpeta `03_XSS_catjav.md`...
+> Necesito que el documento lo pueda leer `03_XSS.jsx`.
+> También debe implementarse la imagen `xss_catjav.PNG`.
 
 ---
 
-### Prompt 4: Command Injection
+### Prompt 8: Command Injection
 
-**Objetivo:** Crear el componente React para mostrar el informe del ataque Command Injection.
+**Objetivo:** Crear componente para mostrar vulnerabilidad Command Injection.
 
-> Necesito el componente `C:\auditoria_catjav\src\components\04_Comandos.jsx` que cargue el archivo Markdown correspondiente y permita mostrar posteriormente la evidencia del ataque.
-
----
-
-### Prompt 5: Clasificación de Activos
-
-**Objetivo:** Mostrar el contenido del archivo `05_Activos_catjav.md` en React.
-
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\05_Activos_catjav.md`.
->
-> Necesito que el documento lo pueda leer `05_Activos.jsx` para después ser usado en `App.jsx`.
+> Necesito el componente `04_Comandos.jsx` que cargue el Markdown correspondiente y permita mostrar evidencia del ataque.
 
 ---
 
-### Prompt 6: Matriz de Riesgo
+### Prompt 9: Clasificación de activos
 
-**Objetivo:** Mostrar la matriz de riesgos desarrollada en Markdown dentro del sitio web.
+**Objetivo:** Renderizar activos de la empresa en React.
 
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\06_Matriz_catjav.md`.
->
-> Necesito que el documento lo pueda leer `06_Matriz.jsx` para después ser usado en `App.jsx`.
-
----
-
-### Prompt 7: Controles de Seguridad
-
-**Objetivo:** Crear el componente React para visualizar el documento de controles de seguridad.
-
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\07_Controles_catjav.md`.
->
-> Necesito que el documento lo pueda leer `07_controles.jsx` para después ser usado en `App.jsx`.
+> Tengo este markdown en la carpeta `05_Activos_catjav.md`...
+> Necesito que el documento lo pueda leer `05_Activos.jsx`.
 
 ---
 
-### Prompt 8: Plan de Recuperación
+### Prompt 10: Matriz de riesgo
 
-**Objetivo:** Incorporar el documento de recuperación y continuidad del negocio.
+**Objetivo:** Mostrar matriz de riesgos en la aplicación.
 
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\08_Recuperacion_catjav.md`.
->
-> Necesito que el documento lo pueda leer `08_Recuperacion.jsx` para después ser usado en `App.jsx`.
-
----
-
-### Prompt 9: Registro de Prompts
-
-**Objetivo:** Mostrar el documento que recopila los prompts utilizados durante el proyecto.
-
-> Tengo este markdown en la carpeta `C:\auditoria_catjav\Docs_catjav\09_Prompts_catjav.md`.
->
-> Necesito que el documento lo pueda leer `09_prompt.jsx` para después ser usado en `App.jsx`.
+> Tengo este markdown en la carpeta `06_Matriz_catjav.md`...
+> Necesito que el documento lo pueda leer `06_Matriz.jsx`.
 
 ---
 
-### Prompt 10: Integración de todos los componentes
+### Prompt 11: Controles de seguridad
 
-**Objetivo:** Integrar todos los componentes creados dentro de una única aplicación React.
+**Objetivo:** Visualizar controles de seguridad en React.
+
+> Tengo este markdown en la carpeta `07_Controles_catjav.md`...
+> Necesito que el documento lo pueda leer `07_controles.jsx`.
+
+---
+
+### Prompt 12: Plan de recuperación
+
+**Objetivo:** Mostrar plan de recuperación y continuidad.
+
+> Tengo este markdown en la carpeta `08_Recuperacion_catjav.md`...
+> Necesito que el documento lo pueda leer `08_Recuperacion.jsx`.
+
+---
+
+### Prompt 13: Registro de prompts
+
+**Objetivo:** Mostrar registro de prompts utilizados.
+
+> Tengo este markdown en la carpeta `09_Prompts_catjav.md`...
+> Necesito que el documento lo pueda leer `09_prompt.jsx`.
+
+---
+
+### Prompt 14: Integración en App.jsx
+
+**Objetivo:** Unificar todos los componentes en una sola aplicación React.
 
 > ¿Puedes crear en `App.jsx` donde estén todos los `.jsx` como me mostraste?
 
 ---
 
-### Prompt 11: Diseño profesional
+### Prompt 15: Diseño profesional
 
-**Objetivo:** Rediseñar completamente la interfaz para que tenga apariencia de una auditoría profesional.
+**Objetivo:** Aplicar diseño tipo dashboard de auditoría con paleta de colores.
 
-> Necesito que se vea profesional como la página de referencia utilizando el esquema de colores:
->
-> - `#08415C`
-> - `#CC2936`
-> - `#EBBAB9`
-> - `#388697`
-> - `#B5FFE1`
->
-> Utilizando `App.css` y `App.jsx` usando el JavaScript anterior como base.
+> Necesito que se vea profesional como la página de referencia usando:
+> #08415C, #CC2936, #EBBAB9, #388697, #B5FFE1
+> usando App.css y App.jsx.
 
 ---
 
-### Prompt 12: Visualización de tablas Markdown
+### Prompt 16: Visualización de tablas Markdown
 
-**Objetivo:** Permitir que las tablas escritas en los archivos Markdown se rendericen correctamente dentro de React.
+**Objetivo:** Permitir renderizado correcto de tablas en Markdown.
 
-> Necesito que las tablas que se usan en los markdown sean visibles en `App.jsx`.
+> Necesito que las tablas que se usan en los markdown sean visibles en App.jsx.
 
 ---
 
-## Resultado de la Fase 2
+---
 
-Durante esta fase se logró:
+## Fase 3: Arreglo de la página y sus errores
 
-- Crear un componente React independiente para cada documento Markdown.
-- Renderizar el contenido utilizando `ReactMarkdown`.
-- Incorporar imágenes de evidencia para las vulnerabilidades SQL Injection, XSS y Command Injection.
-- Integrar todos los componentes dentro de `App.jsx`.
-- Diseñar una interfaz con apariencia profesional mediante `App.css`.
-- Habilitar el soporte para tablas Markdown utilizando `remark-gfm`.
-- Mantener una estructura modular que facilita la incorporación de nuevas secciones al informe de auditoría.
+### Prompt 17: Soporte de tablas Markdown
 
+**Objetivo:** Solucionar el problema de renderizado de tablas en React Markdown.
+
+> Necesito que las tablas que se usan en los markdown sean visibles en App.jsx.
+
+**Resultado:**
+- Se detectó que React Markdown no soporta tablas por defecto.
+- Se incorporó `remark-gfm`.
+- Se agregaron estilos CSS para mejorar tablas, código y estructura visual.
+
+---
+
+### Prompt 18: Error en instalación de dependencias (npm install)
+
+**Objetivo:** Resolver error crítico al instalar dependencias del proyecto.
+
+> Command "npm install" exited with 1
+
+**Error detectado:**
+- `EINTEGRITY`
+- caché corrupta de npm
+- errores EPERM en Windows
+
+**Resultado:**
+- Se recomendó limpiar `node_modules`
+- eliminar `package-lock.json`
+- limpiar caché npm
+- reinstalar dependencias
+- verificar versiones de Node y npm
+
+---
+
+## Resultado final del proyecto
+
+- Arquitectura modular con React + Markdown
+- Integración de vulnerabilidades OWASP (SQLi, XSS, CMD Injection)
+- Visualización de tablas, imágenes y reportes
+- Dashboard tipo auditoría profesional
+- Corrección de errores de dependencias y renderizado

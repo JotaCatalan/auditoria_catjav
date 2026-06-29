@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/matrix.css";
 
 import Resumen from "./components/01_Resumen";
 import InyeccionSQL from "./components/02_InyeccionSQL";
