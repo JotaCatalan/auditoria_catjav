@@ -1,54 +1,89 @@
-/* Basic app shell and card styles */
-.app-shell {
-	min-height: 100vh;
-	background: #f8fafc;
-	color: #0f172a;
+:root {
+  --primary: #08415c;
+  --danger: #cc2936;
+  --soft: #ebbab9;
+  --secondary: #388697;
+  --accent: #b5ffe1;
+
+  --bg: #f7fafc;
+  --text: #0f172a;
 }
 
-.app-header {
-	background: linear-gradient(90deg, #0ea5e9aa, #6366f1aa);
-	color: white;
-	padding: 28px 0;
+/* Reset base */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-.app-header__content {
-	max-width: 1100px;
-	margin: 0 auto;
-	display: flex;
-	gap: 16px;
-	align-items: center;
+/* Layout principal */
+.app-container {
+  display: flex;
+  min-height: 100vh;
 }
 
-.app-header__icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 56px;
-	height: 56px;
-	font-size: 28px;
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
 }
 
-.app-header__eyebrow { font-size: 13px; opacity: .9 }
-.app-header__title { font-size: 22px; margin: 2px 0 }
-.app-header__subtitle { font-size: 13px; opacity: .9 }
-
-.app-main { max-width: 1100px; margin: 24px auto; padding: 0 16px 80px }
-
-.app-card { background: white; border-radius: 12px; padding: 18px; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04); margin-bottom: 20px }
-
-.app-card--section { margin-top: 12px }
-
-/* Fullwidth variant stretches to viewport edges and lets images be full width */
-.app-card--fullwidth { width: 100%; max-width: none; padding: 0; background: transparent; box-shadow: none; border: none }
-.app-card--fullwidth > .app-card-inner { background: white; border-radius: 12px; padding: 18px; margin: 0 auto; max-width: 1200px; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04) }
-
-/* Images inside fullwidth cards should expand */
-.app-card--fullwidth img, .app-card--fullwidth .prose img { width: 100%; height: auto; max-width: 100%; display: block; object-fit: contain }
-
-.app-footer { max-width: 1100px; margin: 40px auto; padding: 16px; color: #475569; display: flex; gap: 12px; justify-content: space-between }
-
-@media (max-width: 640px) {
-	.app-header__content { padding: 0 12px }
-	.app-main { padding: 0 12px }
+.sidebar h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--accent);
 }
 
+.nav-link {
+  display: block;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: var(--secondary);
+}
+
+/* Contenido */
+.content {
+  margin-left: 260px;
+  padding: 30px;
+  width: 100%;
+}
+
+/* Secciones estilo informe */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-left: 6px solid var(--secondary);
+}
+
+/* Variantes de riesgo */
+.section.danger {
+  border-left: 6px solid var(--danger);
+}
+
+.section.soft {
+  border-left: 6px solid var(--soft);
+}
+
+.section.accent {
+  border-left: 6px solid var(--accent);
+}
+
+/* Markdown styling */
+.prose {
+  max-width: 100% !important;
+}

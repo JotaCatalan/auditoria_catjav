@@ -1,86 +1,76 @@
-import './App.css'
-import Resumen from './components/01_Resumen.jsx'
-import InyeccionSQL from './components/02_InyeccionSQL.jsx'
-import XSS from './components/03_XSS.jsx'
-import Comandos from './components/04_Comandos.jsx'
-import Activos from './components/05_Activos.jsx'
-import Matriz from './components/06_Matriz.jsx'
-import Controles from './components/07_Controles.jsx'
-import Recuperacion from './components/08_Recuperacion.jsx'
-import Prompt from './components/09_prompt.jsx'
+import "./App.css";
 
-export default function App() {
-	return (
-		<div className="app-shell">
-			<header className="app-header">
-				<div className="app-header__content">
-					<span className="app-header__icon" aria-hidden>🛡️</span>
-					<div>
-						<p className="app-header__eyebrow">Auditoría de Seguridad</p>
-						<h1 className="app-header__title">Informe final de auditoría</h1>
-						<p className="app-header__subtitle">Unidad 3 · TI3034 · Fundamentos de Seguridad de la Información</p>
-					</div>
-				</div>
-			</header>
+import Resumen from "./components/01_Resumen";
+import InyeccionSQL from "./components/02_InyeccionSQL";
+import XSS from "./components/03_XSS";
+import Comandos from "./components/04_Comandos";
+import Activos from "./components/05_Activos";
+import Matriz from "./components/06_Matriz";
+import Controles from "./components/07_controles";
+import Recuperacion from "./components/08_Recuperacion";
+import Prompt from "./components/09_prompt";
 
-			<main className="app-main">
-				<section id="resumen" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Resumen />
-					</div>
-				</section>
+function App() {
+  return (
+    <div className="app-container">
 
-				<section id="inyeccion-sql" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<InyeccionSQL />
-					</div>
-				</section>
+      {/* SIDEBAR */}
+      <aside className="sidebar">
+        <h1>Auditoría MercadoSur</h1>
 
-				<section id="xss" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<XSS />
-					</div>
-				</section>
+        <a className="nav-link" href="#resumen">Resumen</a>
+        <a className="nav-link" href="#sqli">SQL Injection</a>
+        <a className="nav-link" href="#xss">XSS</a>
+        <a className="nav-link" href="#cmd">Command Injection</a>
+        <a className="nav-link" href="#activos">Activos</a>
+        <a className="nav-link" href="#matriz">Matriz de Riesgo</a>
+        <a className="nav-link" href="#controles">Controles</a>
+        <a className="nav-link" href="#recuperacion">Recuperación</a>
+        <a className="nav-link" href="#prompts">Prompts</a>
+      </aside>
 
-				<section id="comandos" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Comandos />
-					</div>
-				</section>
+      {/* CONTENIDO */}
+      <main className="content">
 
-				<section id="activos" className="app-card app-card--section">
-					<Activos />
-				</section>
+        <section id="resumen" className="section accent">
+          <Resumen />
+        </section>
 
-				<section id="matriz" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Matriz />
-					</div>
-				</section>
+        <section id="sqli" className="section danger">
+          <InyeccionSQL />
+        </section>
 
-				<section id="controles" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Controles />
-					</div>
-				</section>
+        <section id="xss" className="section soft">
+          <XSS />
+        </section>
 
-				<section id="recuperacion" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Recuperacion />
-					</div>
-				</section>
+        <section id="cmd" className="section danger">
+          <Comandos />
+        </section>
 
-				<section id="prompts" className="app-card app-card--section app-card--fullwidth">
-					<div className="app-card-inner">
-						<Prompt />
-					</div>
-				</section>
-			</main>
+        <section id="activos" className="section">
+          <Activos />
+        </section>
 
-			<footer className="app-footer">
-				<span>Estudiante: [Nombre completo]</span>
-				<span>Docente: Rubén Schnettler · INACAP Valparaíso</span>
-			</footer>
-		</div>
-	)
+        <section id="matriz" className="section">
+          <Matriz />
+        </section>
+
+        <section id="controles" className="section">
+          <Controles />
+        </section>
+
+        <section id="recuperacion" className="section">
+          <Recuperacion />
+        </section>
+
+        <section id="prompts" className="section">
+          <Prompt />
+        </section>
+
+      </main>
+    </div>
+  );
 }
+
+export default App;
